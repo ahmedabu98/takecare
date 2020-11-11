@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>179686391055-cvtn6auikt7753csq5lnqa1esrbt4dmh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.179686391055-cvtn6auikt7753csq5lnqa1esrbt4dmh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAyDNTfX4-fEILwJ7aNdc-oDu6d5yXZC5U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>179686391055</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.duke.ece590.TakeCare</string>
+	<key>PROJECT_ID</key>
+	<string>takecare-90f7a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>takecare-90f7a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:179686391055:ios:c503202a1aefd59f3c127a</string>
+	<key>DATABASE_URL</key>
+	<string>https://takecare-90f7a.firebaseio.com</string>
+</dict>
+</plist>

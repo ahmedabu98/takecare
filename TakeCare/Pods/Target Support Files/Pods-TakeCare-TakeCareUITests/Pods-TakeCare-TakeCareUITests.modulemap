@@ -1,0 +1,6 @@
+framework module Pods_TakeCare_TakeCareUITests {
+  umbrella header "Pods-TakeCare-TakeCareUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
