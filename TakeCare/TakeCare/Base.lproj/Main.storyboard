@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zll-Lu-2Ea">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="vC1-wz-AE4">
             <objects>
-                <viewController id="Zll-Lu-2Ea" sceneMemberID="viewController">
+                <viewController id="Zll-Lu-2Ea" customClass="calendarViewController" customModule="TakeCare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1t-Bm-gyH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,6 @@
         <!--Today-->
         <scene sceneID="Vz5-mj-tyS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F6R-Va-coJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="f87-Vk-zQN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emj-ke-f3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -161,7 +160,7 @@
                                 <rect key="frame" x="217" y="319" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="6Xn-ke-dGU"/>
-                                    <constraint firstAttribute="height" constant="150" id="IqV-xI-rBs"/>
+                                    <constraint firstAttribute="height" constant="150" id="ppv-6z-wJ2"/>
                                 </constraints>
                                 <state key="normal" image="book.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
@@ -170,16 +169,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Kj-EDY">
                                 <rect key="frame" x="217" y="477" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="49c-PA-EQN"/>
                                     <constraint firstAttribute="width" constant="150" id="IKb-qK-3Qe"/>
+                                    <constraint firstAttribute="height" constant="150" id="YD0-Kb-7Kw"/>
                                 </constraints>
                                 <state key="normal" image="person.3.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnv-cr-b7W">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnv-cr-b7W">
                                 <rect key="frame" x="36" y="687" width="331" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="    Daily Journal Entry" image="list.bullet.rectangle" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
@@ -203,25 +201,27 @@
                         <viewLayoutGuide key="safeArea" id="R5h-iJ-yva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YiM-Kj-EDY" firstAttribute="top" secondItem="QuG-ba-I8f" secondAttribute="bottom" constant="8" symbolic="YES" id="CPj-Z6-l7u"/>
-                            <constraint firstItem="Uc7-9N-kwj" firstAttribute="top" secondItem="ZoQ-oG-kGz" secondAttribute="bottom" constant="8" symbolic="YES" id="CdP-cV-riy"/>
-                            <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="YiM-Kj-EDY" secondAttribute="trailing" constant="47" id="ENR-Dv-zjj"/>
-                            <constraint firstItem="hyu-mv-SeJ" firstAttribute="top" secondItem="Uc7-9N-kwj" secondAttribute="bottom" constant="8" symbolic="YES" id="ERI-Sp-Gqh"/>
-                            <constraint firstItem="QuG-ba-I8f" firstAttribute="top" secondItem="7vr-f1-Obf" secondAttribute="bottom" constant="8" symbolic="YES" id="H5m-aO-sQH"/>
+                            <constraint firstItem="Uc7-9N-kwj" firstAttribute="top" secondItem="ZoQ-oG-kGz" secondAttribute="bottom" constant="8" symbolic="YES" id="3Go-ZM-3dx"/>
+                            <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="YiM-Kj-EDY" secondAttribute="trailing" constant="47" id="CyW-va-EjZ"/>
+                            <constraint firstItem="QuG-ba-I8f" firstAttribute="top" secondItem="7vr-f1-Obf" secondAttribute="bottom" constant="8" symbolic="YES" id="Jdn-Uh-M5N"/>
+                            <constraint firstItem="Tnv-cr-b7W" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="36" id="TLj-9n-6Xw"/>
                             <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="7vr-f1-Obf" secondAttribute="trailing" constant="47" id="U5X-XY-cz4"/>
                             <constraint firstItem="MV2-Pa-GKK" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="59" id="W1O-Ew-sv2"/>
                             <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="QuG-ba-I8f" secondAttribute="trailing" constant="47" id="dGX-BS-WDA"/>
+                            <constraint firstItem="hyu-mv-SeJ" firstAttribute="top" secondItem="Uc7-9N-kwj" secondAttribute="bottom" constant="8" symbolic="YES" id="g3o-vh-Xy1"/>
                             <constraint firstItem="Uc7-9N-kwj" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="36" id="hJe-Zl-S5a"/>
                             <constraint firstItem="MV2-Pa-GKK" firstAttribute="top" secondItem="R5h-iJ-yva" secondAttribute="top" constant="18" id="hqR-eZ-4bK"/>
                             <constraint firstItem="hyu-mv-SeJ" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="36" id="m0L-ya-HrH"/>
                             <constraint firstItem="7vr-f1-Obf" firstAttribute="top" secondItem="MV2-Pa-GKK" secondAttribute="bottom" constant="32" id="pNW-Mv-aRi"/>
                             <constraint firstItem="ZoQ-oG-kGz" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="36" id="rAr-hy-doj"/>
-                            <constraint firstItem="YiM-Kj-EDY" firstAttribute="top" secondItem="QuG-ba-I8f" secondAttribute="bottom" constant="8" symbolic="YES" id="xa8-it-RIf"/>
+                            <constraint firstItem="Tnv-cr-b7W" firstAttribute="top" secondItem="hyu-mv-SeJ" secondAttribute="bottom" constant="60" id="uJd-LD-HGL"/>
+                            <constraint firstItem="YiM-Kj-EDY" firstAttribute="top" secondItem="QuG-ba-I8f" secondAttribute="bottom" constant="8" symbolic="YES" id="xy8-sa-YJx"/>
                             <constraint firstItem="ZoQ-oG-kGz" firstAttribute="top" secondItem="MV2-Pa-GKK" secondAttribute="bottom" constant="32" id="yM7-S2-d73"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Today" selectedImage="plus.circle" catalog="system" id="sZL-0A-Dnq"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6R-Va-coJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1476.8115942028987" y="79.6875"/>
         </scene>
@@ -233,14 +233,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your daily journal log" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9h-cC-Rb4">
-                                <rect key="frame" x="53" y="202" width="308" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="Go5-FQ-O8H"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Journal Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhi-J8-ox3">
                                 <rect key="frame" x="53" y="0.0" width="308" height="67"/>
                                 <constraints>
@@ -259,17 +251,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
+                                <rect key="frame" x="53" y="87" width="308" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="I0Y-NI-5Zg"/>
+                                    <constraint firstAttribute="height" constant="615" id="iOi-gY-EFT"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i0U-ZE-V6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="top" secondItem="i0U-ZE-V6n" secondAttribute="top" id="4YZ-Nb-d6z"/>
-                            <constraint firstItem="G9h-cC-Rb4" firstAttribute="leading" secondItem="i0U-ZE-V6n" secondAttribute="leading" constant="53" id="ERa-3e-5Zj"/>
+                            <constraint firstItem="xQb-Rw-tu5" firstAttribute="top" secondItem="xhi-J8-ox3" secondAttribute="bottom" constant="20" id="5Ih-nf-Nq2"/>
+                            <constraint firstItem="pAM-GX-4JV" firstAttribute="top" secondItem="xQb-Rw-tu5" secondAttribute="bottom" constant="44" id="Nno-04-dqm"/>
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="leading" secondItem="i0U-ZE-V6n" secondAttribute="leading" constant="53" id="STA-HF-E53"/>
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="SgA-Ml-uYl"/>
                             <constraint firstItem="pAM-GX-4JV" firstAttribute="leading" secondItem="i0U-ZE-V6n" secondAttribute="leading" constant="53" id="SwN-hw-NCo"/>
-                            <constraint firstItem="G9h-cC-Rb4" firstAttribute="top" secondItem="xhi-J8-ox3" secondAttribute="bottom" constant="91" id="b2R-RO-Cfh"/>
-                            <constraint firstItem="pAM-GX-4JV" firstAttribute="top" secondItem="G9h-cC-Rb4" secondAttribute="bottom" constant="51" id="bX1-ea-FQr"/>
+                            <constraint firstItem="xQb-Rw-tu5" firstAttribute="leading" secondItem="i0U-ZE-V6n" secondAttribute="leading" constant="53" id="Z23-xi-02u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FRw-6C-vDo"/>
@@ -284,6 +288,7 @@
                 <tabBarController storyboardIdentifier="userVC" automaticallyAdjustsScrollViewInsets="NO" id="Hw4-x5-3K6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XXM-Mp-26l">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -309,6 +314,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
