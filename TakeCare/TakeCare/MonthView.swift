@@ -93,7 +93,7 @@ class MonthView: UIView {
         btn.setTitleColor(Style.monthViewBtnLeftColor, for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
-        btn.setTitleColor(UIColor.lightGray, for: .disabled)
+        // btn.setTitleColor(UIColor.lightGray, for: .disabled)
         return btn
     }()
     

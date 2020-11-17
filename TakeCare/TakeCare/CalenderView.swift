@@ -1,8 +1,8 @@
 //
-//  CalendarView.swift
+//  CalenderView.swift
 //  TakeCare
 //
-//  Created by Ramon Novo Aragon on 11/11/20.
+//  Created by Ramon Novo Aragon on 11/17/20.
 //
 
 import UIKit
@@ -118,8 +118,11 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
             cell.isHidden=false
             cell.lbl.text="\(calcDate)"
             if calcDate < todaysDate && currentYear == presentYear && currentMonthIndex == presentMonthIndex {
-                cell.isUserInteractionEnabled=false
-                cell.lbl.textColor = UIColor.lightGray
+                cell.isUserInteractionEnabled=true
+                // cell.lbl.textColor = UIColor.lightGray
+                cell.lbl.textColor = Style.activeCellLblColor
+            } else if calcDate == todaysDate {
+                cell.lbl.textColor = UIColor.blue
             } else {
                 cell.isUserInteractionEnabled=true
                 cell.lbl.textColor = Style.activeCellLblColor
@@ -131,15 +134,22 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=Colors.darkRed
-        let lbl = cell?.subviews[1] as! UILabel
+        let lbl = cell?.subviews[0] as! UILabel
         lbl.textColor=UIColor.white
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        // print("indexPath is: ", indexPath)
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=UIColor.clear
-        let lbl = cell?.subviews[1] as! UILabel
-        lbl.textColor = Style.activeCellLblColor
+        let lbl = cell?.subviews[0] as! UILabel
+        let calcDate = indexPath.row-firstWeekDayOfMonth+2
+        if calcDate == todaysDate {
+            lbl.textColor = UIColor.blue
+        } else {
+            lbl.textColor = Style.activeCellLblColor
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -179,8 +189,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         firstWeekDayOfMonth=getFirstWeekDay()
         
         myCollectionView.reloadData()
-        
-        monthView.btnLeft.isEnabled = !(currentMonthIndex == presentMonthIndex && currentYear == presentYear)
+        monthView.btnLeft.isEnabled = true
+        // monthView.btnLeft.isEnabled = !(currentMonthIndex == presentMonthIndex && currentYear == presentYear)
     }
     
     func setupViews() {
