@@ -12,7 +12,7 @@ enum MyTheme {
     case dark
 }
 
-class calendarViewController: UIViewController {
+class calendarViewController: /*UIViewController,*/ UINavigationController, CalenderViewDelegate {
     
     var theme = MyTheme.dark
     
@@ -27,6 +27,7 @@ class calendarViewController: UIViewController {
         calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
         calenderView.heightAnchor.constraint(equalToConstant: 365).isActive=true
+        // calenderView.storyboard = storyboard
         
         let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
         self.navigationItem.rightBarButtonItem = rightBarBtn
@@ -52,9 +53,16 @@ class calendarViewController: UIViewController {
     }
     
     let calenderView: CalenderView = {
+        // calenderView.storyboard = storyboard
         let v=CalenderView(theme: MyTheme.dark)
         v.translatesAutoresizingMaskIntoConstraints=false
+        //v.storyboard = storyboard
         return v
     }()
+    
+    func performCustomSegue(identifier: String){
+        let destView = storyboard?.instantiateViewController(identifier: identifier)
+        self.navigationController?.pushViewController(destView!, animated: true)
+    }
     
 }

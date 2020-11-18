@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol CalenderViewDelegate: class {
+    func performCustomSegue(identifier: String);
+
+}
+
 struct Colors {
     static var darkGray = #colorLiteral(red: 0.3764705882, green: 0.3647058824, blue: 0.3647058824, alpha: 1)
     static var darkRed = #colorLiteral(red: 0.5019607843, green: 0.1529411765, blue: 0.1764705882, alpha: 1)
@@ -51,6 +56,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     var presentYear = 0
     var todaysDate = 0
     var firstWeekDayOfMonth = 0   //(Sunday-Saturday 1-7)
+    var delegate: CalenderViewDelegate?
+    let storyboard : UIStoryboard? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -136,10 +143,16 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         cell?.backgroundColor=Colors.darkRed
         let lbl = cell?.subviews[0] as! UILabel
         lbl.textColor=UIColor.white
+        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
+        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
+        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
+        delegate?.performCustomSegue(identifier: "DetailLogViewController")
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailLogViewController")
+//
+//        self.present(vc, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        // print("indexPath is: ", indexPath)
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=UIColor.clear
         let lbl = cell?.subviews[0] as! UILabel
