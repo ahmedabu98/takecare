@@ -114,7 +114,7 @@
         <!--View Controller-->
         <scene sceneID="Swt-P3-e6v">
             <objects>
-                <viewController storyboardIdentifier="DetailLogViewController" id="haB-n3-jpN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailLogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="haB-n3-jpN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k9k-f9-awQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,6 +306,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIp-5R-5s1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2275.36231884058" y="79.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H9z-AK-Vzn">
+            <objects>
+                <viewController id="dOi-xL-daQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKV-Xa-9na">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xSD-uO-J4P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPq-QD-EhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3000" y="73"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pR3-Rm-6SF">

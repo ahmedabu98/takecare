@@ -8,8 +8,7 @@
 import UIKit
 
 protocol CalenderViewDelegate: class {
-    func performCustomSegue(identifier: String);
-
+    func performCustomSegue();
 }
 
 struct Colors {
@@ -57,7 +56,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     var todaysDate = 0
     var firstWeekDayOfMonth = 0   //(Sunday-Saturday 1-7)
     var delegate: CalenderViewDelegate?
-    let storyboard : UIStoryboard? = nil
+    var storyboard : UIStoryboard? = nil
+    var navController: UINavigationController? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -128,7 +128,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
                 cell.isUserInteractionEnabled=true
                 // cell.lbl.textColor = UIColor.lightGray
                 cell.lbl.textColor = Style.activeCellLblColor
-            } else if calcDate == todaysDate {
+            } else if ((calcDate == todaysDate) && (currentMonthIndex == presentMonthIndex)) {
                 cell.lbl.textColor = UIColor.blue
             } else {
                 cell.isUserInteractionEnabled=true
@@ -143,13 +143,20 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         cell?.backgroundColor=Colors.darkRed
         let lbl = cell?.subviews[0] as! UILabel
         lbl.textColor=UIColor.white
-        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
-        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
-        print("ABOUT TO PUSH THE NEW VIEW CONTROLLER")
-        delegate?.performCustomSegue(identifier: "DetailLogViewController")
+        // delegate?.performCustomSegue()
+        
+        let vc = storyboard?.instantiateViewController(identifier: "DetailLogViewController")
+        self.navController?.pushViewController(vc!, animated: true)
+        
+        // let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailLogViewController")
+        // storyboard.present(registerViewController, animated: true)
+//        let segue = UIStoryboardSegue.self
+//        let destVC = segue.destination
+        
+        
 //        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailLogViewController")
 //
-//        self.present(vc, animated: true, completion: nil)
+//        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
