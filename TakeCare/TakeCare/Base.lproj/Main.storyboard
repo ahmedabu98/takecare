@@ -363,13 +363,40 @@ your date with your provider?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="IeQ-lR-aPB">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get started!  Select the logs from  the past week that you  wish to share." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzg-2n-KuX">
+                                    <rect key="frame" x="42" y="17" width="177" height="81.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-MS-eSU">
+                                    <rect key="frame" x="258" y="17" width="104" height="26"/>
+                                    <state key="normal" title="Share All!"/>
+                                    <connections>
+                                        <action selector="shareAll_Pressed:" destination="9n4-BG-Yu8" eventType="touchUpInside" id="aSi-Ir-n84"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wM-Mf-HgV">
+                                    <rect key="frame" x="240" y="62" width="141" height="30"/>
+                                    <state key="normal" title="Share Selected Logs"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="3wM-Mf-HgV" firstAttribute="leading" secondItem="Nzg-2n-KuX" secondAttribute="trailing" constant="21" id="MED-WJ-g8J"/>
+                                <constraint firstItem="Nzg-2n-KuX" firstAttribute="centerY" secondItem="IeQ-lR-aPB" secondAttribute="centerY" id="MsT-mr-6KM"/>
+                                <constraint firstItem="Nzg-2n-KuX" firstAttribute="leading" secondItem="IeQ-lR-aPB" secondAttribute="leading" constant="42" id="bzo-dF-rPs"/>
+                                <constraint firstItem="3wM-Mf-HgV" firstAttribute="top" secondItem="fKC-MS-eSU" secondAttribute="bottom" constant="15" id="gW1-a3-Vpu"/>
+                                <constraint firstItem="fKC-MS-eSU" firstAttribute="top" secondItem="IeQ-lR-aPB" secondAttribute="top" constant="17" id="qxn-dt-NDT"/>
+                                <constraint firstItem="fKC-MS-eSU" firstAttribute="leading" secondItem="Nzg-2n-KuX" secondAttribute="trailing" constant="39" id="wDe-wO-Fkg"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shareCell" rowHeight="250" id="ViS-ot-LIO" customClass="shareTableViewCell" customModule="TakeCare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ViS-ot-LIO" id="s8z-yi-vVv">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -675,13 +702,19 @@ your date with your provider?</string>
                     <view key="view" contentMode="scaleToFill" id="MHr-R5-bRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoF-1k-geA">
+                                <rect key="frame" x="20" y="71" width="374" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0qP-42-M4F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD0-0c-NHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755" y="1417"/>
+            <point key="canvasLocation" x="753.62318840579712" y="1416.9642857142856"/>
         </scene>
         <!--Past Work Log-->
         <scene sceneID="pLU-nK-lNp">

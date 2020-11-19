@@ -8,7 +8,36 @@
 import UIKit
 
 class shareTableViewController: UITableViewController {
+    
+    @IBAction func shareAll_Pressed(_ sender: Any) {
+        print("SHARE ALL PRESSED")
+        print("SHARE ALL PRESSED")
+        print("SHARE ALL PRESSED")
+        let confirmMessage = UIAlertController(title: "Confirmation", message: "You are about to share all your logs with your provider. Are you sure about this?", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                print("Ok button tapped")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "userVC")
+                
+                self.present(vc, animated: true, completion: nil)
+                
+            })
+            
+            // Create Cancel button with action handlder
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+                print("Cancel button tapped")
+            }
+            
+            //Add OK and Cancel button to dialog message
+            confirmMessage.addAction(ok)
+            confirmMessage.addAction(cancel)
+            self.present(confirmMessage, animated: true, completion: nil)
 
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
