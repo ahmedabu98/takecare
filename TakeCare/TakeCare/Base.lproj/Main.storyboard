@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hw4-x5-3K6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -109,16 +109,16 @@
             </objects>
             <point key="canvasLocation" x="710.14492753623199" y="751.33928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="Vz5-mj-tyS">
             <objects>
-                <viewController id="f87-Vk-zQN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todayEntry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f87-Vk-zQN" customClass="todayViewController" customModule="TakeCare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emj-ke-f3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-Pa-GKK">
-                                <rect key="frame" x="59" y="106" width="308" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello! Are you ready to add your daily logs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-Pa-GKK">
+                                <rect key="frame" x="20" y="106" width="308" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="T92-IP-Jdp"/>
                                     <constraint firstAttribute="height" constant="67" id="bb4-Zm-AYg"/>
@@ -208,7 +208,7 @@
                             <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="YiM-Kj-EDY" secondAttribute="trailing" constant="47" id="CyW-va-EjZ"/>
                             <constraint firstItem="QuG-ba-I8f" firstAttribute="top" secondItem="7vr-f1-Obf" secondAttribute="bottom" constant="8" symbolic="YES" id="Jdn-Uh-M5N"/>
                             <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="7vr-f1-Obf" secondAttribute="trailing" constant="47" id="U5X-XY-cz4"/>
-                            <constraint firstItem="MV2-Pa-GKK" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="59" id="W1O-Ew-sv2"/>
+                            <constraint firstItem="MV2-Pa-GKK" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="20" id="W1O-Ew-sv2"/>
                             <constraint firstItem="R5h-iJ-yva" firstAttribute="trailing" secondItem="QuG-ba-I8f" secondAttribute="trailing" constant="47" id="dGX-BS-WDA"/>
                             <constraint firstItem="hyu-mv-SeJ" firstAttribute="top" secondItem="Uc7-9N-kwj" secondAttribute="bottom" constant="8" symbolic="YES" id="g3o-vh-Xy1"/>
                             <constraint firstItem="Uc7-9N-kwj" firstAttribute="leading" secondItem="R5h-iJ-yva" secondAttribute="leading" constant="36" id="hJe-Zl-S5a"/>
@@ -222,15 +222,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UUj-zM-UHM"/>
+                    <connections>
+                        <outlet property="todayMessage" destination="MV2-Pa-GKK" id="VOz-20-Piq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6R-Va-coJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2368.1159420289855" y="72.991071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Daily Log View Controller-->
         <scene sceneID="TC7-n2-Qcc">
             <objects>
-                <viewController id="Csf-y5-lBy" sceneMemberID="viewController">
+                <viewController id="Csf-y5-lBy" customClass="dailyLogViewController" customModule="TakeCare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfQ-mI-FiN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,6 +255,9 @@
                                 <state key="normal" title="I'm all done!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="dailyLog_entered:" destination="Csf-y5-lBy" eventType="touchUpInside" id="7gG-KW-N4H"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter your daily log:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
                                 <rect key="frame" x="53" y="175" width="308" height="500"/>
@@ -767,6 +773,9 @@ your date with your provider?</string>
                                         <constraint firstItem="OYe-lX-zrP" firstAttribute="top" secondItem="UQw-1s-kxO" secondAttribute="bottom" constant="17" id="xLo-90-Fxb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayLabel" destination="UQw-1s-kxO" id="jwu-bF-xEI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
