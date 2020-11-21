@@ -139,14 +139,15 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell=collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor=Colors.darkRed
-        let lbl = cell?.subviews[0] as! UILabel
+        let cell=collectionView.cellForItem(at: indexPath) as! dateCVCell
+        let calcDate = indexPath.row-firstWeekDayOfMonth+2
+        cell.backgroundColor=Colors.darkRed
+        let lbl = cell.subviews[0] as! UILabel
         lbl.textColor=UIColor.white
         // delegate?.performCustomSegue()
         
         let vc = storyboard?.instantiateViewController(identifier: "DetailLogViewController") as! checkAllPastLogsViewController
-        vc.text = "Hello World"
+        vc.text = "Log for \(currentMonthIndex)/\(calcDate)/\(currentYear)"
         self.navController?.pushViewController(vc, animated: true)
         
         // let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailLogViewController")

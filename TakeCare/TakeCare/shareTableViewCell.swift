@@ -8,7 +8,8 @@
 import UIKit
 
 class shareTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var dayLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

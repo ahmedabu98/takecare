@@ -9,6 +9,9 @@ import UIKit
 
 class shareTableViewController: UITableViewController {
     
+    var Week: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    var index: Int = 0
+    
     @IBAction func shareAll_Pressed(_ sender: Any) {
         print("SHARE ALL PRESSED")
         print("SHARE ALL PRESSED")
@@ -65,6 +68,9 @@ class shareTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shareCell", for: indexPath) as! shareTableViewCell
 
         // Configure the cell...
+        cell.dayLabel.text = Week[index]
+        index = index+1
+        
 
         return cell
     }
