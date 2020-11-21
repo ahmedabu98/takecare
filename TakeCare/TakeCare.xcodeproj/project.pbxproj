@@ -17,6 +17,7 @@
 		6C83BF85255B7043007C701C /* TakeCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C83BF84255B7043007C701C /* TakeCareUITests.swift */; };
 		6C83BF97255B70B3007C701C /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C83BF96255B70B3007C701C /* loginViewController.swift */; };
 		6C83BF9C255B7C1F007C701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C83BF9B255B7C1E007C701C /* GoogleService-Info.plist */; };
+		6C8F13502568A0AC009CE3C8 /* moodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */; };
 		7DCBC93F4BC9C52C41E3A781 /* Pods_TakeCareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4A656E7048C790319D4E2F /* Pods_TakeCareTests.framework */; };
 		AF86ACD9DAF9ACE3A14859DF /* Pods_TakeCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1342874D2978ABF5DD687A5 /* Pods_TakeCare.framework */; };
 		C9360167255CAD360077AC04 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9360166255CAD360077AC04 /* MonthView.swift */; };
@@ -63,6 +64,7 @@
 		6C83BF86255B7044007C701C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C83BF96255B70B3007C701C /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		6C83BF9B255B7C1E007C701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodViewController.swift; sourceTree = "<group>"; };
 		941F0FC1D97398930960E902 /* Pods-TakeCare-TakeCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.release.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC8E98A1627ABAA8A66FABF1 /* Pods-TakeCare-TakeCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.debug.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9360166255CAD360077AC04 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				6C83BF66255B7041007C701C /* ViewController.swift */,
 				C99C7EC0255EFC2D0015172C /* calendarViewController.swift */,
 				6C83BF68255B7041007C701C /* Main.storyboard */,
+				6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */,
 				C9C3B4E92565E0C70062D2D1 /* shareTableViewController.swift */,
 				C9C3B4D22565E0AC0062D2D1 /* shareTableViewCell.swift */,
 				C9360166255CAD360077AC04 /* MonthView.swift */,
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99C7EC1255EFC2D0015172C /* calendarViewController.swift in Sources */,
+				6C8F13502568A0AC009CE3C8 /* moodViewController.swift in Sources */,
 				C9360167255CAD360077AC04 /* MonthView.swift in Sources */,
 				C9C3B4D32565E0AC0062D2D1 /* shareTableViewCell.swift in Sources */,
 				C9C9C8DE256487C800ED87C1 /* CalenderView.swift in Sources */,
