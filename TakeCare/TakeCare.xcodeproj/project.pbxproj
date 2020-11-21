@@ -20,6 +20,7 @@
 		6C8F13502568A0AC009CE3C8 /* moodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */; };
 		7DCBC93F4BC9C52C41E3A781 /* Pods_TakeCareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4A656E7048C790319D4E2F /* Pods_TakeCareTests.framework */; };
 		AF86ACD9DAF9ACE3A14859DF /* Pods_TakeCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1342874D2978ABF5DD687A5 /* Pods_TakeCare.framework */; };
+		C904ACAC25689DCB0050524B /* checkAllPastLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904ACAB25689DCB0050524B /* checkAllPastLogsViewController.swift */; };
 		C9360167255CAD360077AC04 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9360166255CAD360077AC04 /* MonthView.swift */; };
 		C936016F255CAD880077AC04 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936016E255CAD880077AC04 /* WeekdaysView.swift */; };
 		C99C7EC1255EFC2D0015172C /* calendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C7EC0255EFC2D0015172C /* calendarViewController.swift */; };
@@ -67,6 +68,7 @@
 		6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodViewController.swift; sourceTree = "<group>"; };
 		941F0FC1D97398930960E902 /* Pods-TakeCare-TakeCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.release.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC8E98A1627ABAA8A66FABF1 /* Pods-TakeCare-TakeCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.debug.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C904ACAB25689DCB0050524B /* checkAllPastLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkAllPastLogsViewController.swift; sourceTree = "<group>"; };
 		C9360166255CAD360077AC04 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		C936016E255CAD880077AC04 /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		C99C7EC0255EFC2D0015172C /* calendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +164,11 @@
 				6C83BF66255B7041007C701C /* ViewController.swift */,
 				C99C7EC0255EFC2D0015172C /* calendarViewController.swift */,
 				6C83BF68255B7041007C701C /* Main.storyboard */,
+<<<<<<< HEAD
 				6C8F134F2568A0AC009CE3C8 /* moodViewController.swift */,
+=======
+				C904ACAB25689DCB0050524B /* checkAllPastLogsViewController.swift */,
+>>>>>>> c2a6538270a69e1c2233a8fc8a5bfbd287366e8b
 				C9C3B4E92565E0C70062D2D1 /* shareTableViewController.swift */,
 				C9C3B4D22565E0AC0062D2D1 /* shareTableViewCell.swift */,
 				C9360166255CAD360077AC04 /* MonthView.swift */,
@@ -439,6 +445,7 @@
 				C9360167255CAD360077AC04 /* MonthView.swift in Sources */,
 				C9C3B4D32565E0AC0062D2D1 /* shareTableViewCell.swift in Sources */,
 				C9C9C8DE256487C800ED87C1 /* CalenderView.swift in Sources */,
+				C904ACAC25689DCB0050524B /* checkAllPastLogsViewController.swift in Sources */,
 				C936016F255CAD880077AC04 /* WeekdaysView.swift in Sources */,
 				6C83BF97255B70B3007C701C /* loginViewController.swift in Sources */,
 				6C83BF67255B7041007C701C /* ViewController.swift in Sources */,

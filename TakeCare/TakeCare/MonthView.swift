@@ -26,7 +26,7 @@ class MonthView: UIView {
         
         setupViews()
         
-        btnLeft.isEnabled=false
+        btnLeft.isEnabled=true
     }
     
     @objc func btnLeftRightAction(sender: UIButton) {
