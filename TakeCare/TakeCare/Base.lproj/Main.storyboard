@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ImJ-Qa-nY0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,8 +58,9 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSl-Js-slU"/>
@@ -98,24 +98,34 @@
         <!--Today-->
         <scene sceneID="Vz5-mj-tyS">
             <objects>
-                <viewController id="f87-Vk-zQN" sceneMemberID="viewController">
+                <viewController title="Today" id="f87-Vk-zQN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emj-ke-f3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoQ-oG-kGz">
-                                <rect key="frame" x="36" y="161" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoQ-oG-kGz">
+                                <rect key="frame" x="38" y="156" width="146" height="157"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="3bc-K4-0Ri"/>
                                     <constraint firstAttribute="height" constant="150" id="Qla-XK-8JZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <color key="tintColor" red="0.35673546789999999" green="0.74338883160000002" blue="0.97258168460000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="smiley.fill" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc7-9N-kwj">
-                                <rect key="frame" x="36" y="319" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc7-9N-kwj">
+                                <rect key="frame" x="28" y="319" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="YDd-bH-qXV"/>
                                     <constraint firstAttribute="height" constant="150" id="sK7-gZ-cc7"/>
@@ -123,14 +133,30 @@
                                 <state key="normal" image="sleep">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="small"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-mv-SeJ">
-                                <rect key="frame" x="36" y="477" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-mv-SeJ">
+                                <rect key="frame" x="28" y="481" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Bss-Ff-pFR"/>
                                     <constraint firstAttribute="height" constant="150" id="cNe-Za-R5K"/>
                                 </constraints>
                                 <state key="normal" image="alcohol"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuG-ba-I8f">
                                 <rect key="frame" x="217" y="319" width="150" height="150"/>
@@ -142,6 +168,14 @@
                                 <state key="normal" image="book.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Kj-EDY">
                                 <rect key="frame" x="217" y="477" width="150" height="150"/>
@@ -153,15 +187,31 @@
                                 <state key="normal" image="person.3.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnv-cr-b7W">
-                                <rect key="frame" x="47" y="700" width="320" height="52"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnv-cr-b7W">
+                                <rect key="frame" x="48" y="700" width="312" height="52"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.67450980390000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="    Daily Journal Entry" image="list.bullet.rectangle" catalog="system">
-                                    <color key="titleColor" red="0.28235294117647058" green="0.67450980392156867" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Csf-y5-lBy" kind="show" id="WqM-2m-GoD"/>
                                 </connections>
@@ -176,6 +226,14 @@
                                 <state key="normal" image="figure.walk" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.border">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome! Do you want to get started on today's log?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV2-Pa-GKK">
                                 <rect key="frame" x="28" y="64" width="359" height="89"/>
@@ -184,8 +242,50 @@
                                     <constraint firstAttribute="width" constant="308" id="T92-IP-Jdp"/>
                                     <constraint firstAttribute="height" constant="67" id="bb4-Zm-AYg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsa-xU-WSb">
+                                <rect key="frame" x="47" y="284" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-Ce-FnZ">
+                                <rect key="frame" x="261" y="285" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-bg-Irb">
+                                <rect key="frame" x="47" y="438" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcohol &amp; Drugs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eW-z5-sVz">
+                                <rect key="frame" x="47" y="605" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptg-Mx-tkg">
+                                <rect key="frame" x="261" y="606" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-bL-2kz">
+                                <rect key="frame" x="261" y="442" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -224,43 +324,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Journal Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhi-J8-ox3">
-                                <rect key="frame" x="53" y="0.0" width="308" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started on Today's Journal Entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhi-J8-ox3">
+                                <rect key="frame" x="53" y="92" width="308" height="67"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="4gi-nG-Gsn"/>
                                     <constraint firstAttribute="height" constant="67" id="nd8-9K-BRc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-GX-4JV">
-                                <rect key="frame" x="134.5" y="762" width="145" height="46"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-GX-4JV">
+                                <rect key="frame" x="111" y="726" width="193" height="55"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.67450980390000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="I'm all done!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layers.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layers.masksToBound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter your daily log:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
-                                <rect key="frame" x="53" y="87" width="308" height="500"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter your daily log:" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
+                                <rect key="frame" x="53" y="179" width="308" height="500"/>
+                                <color key="backgroundColor" red="0.36862745098039218" green="0.67843137254901964" blue="0.95294117647058818" alpha="0.19063035102739725" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="308" id="I0Y-NI-5Zg"/>
                                     <constraint firstAttribute="height" constant="500" id="wKl-O2-b6W"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i0U-ZE-V6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xhi-J8-ox3" firstAttribute="top" secondItem="i0U-ZE-V6n" secondAttribute="top" id="4YZ-Nb-d6z"/>
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="SgA-Ml-uYl"/>
                             <constraint firstItem="xQb-Rw-tu5" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="UzD-gt-jWM"/>
-                            <constraint firstItem="i0U-ZE-V6n" firstAttribute="bottom" secondItem="pAM-GX-4JV" secondAttribute="bottom" id="rIZ-a7-sfy"/>
+                            <constraint firstItem="pAM-GX-4JV" firstAttribute="top" secondItem="xQb-Rw-tu5" secondAttribute="bottom" constant="47" id="XIH-em-ZhP"/>
+                            <constraint firstItem="xhi-J8-ox3" firstAttribute="top" secondItem="i0U-ZE-V6n" secondAttribute="top" constant="92" id="tjQ-aZ-Scs"/>
                             <constraint firstItem="xQb-Rw-tu5" firstAttribute="top" secondItem="xhi-J8-ox3" secondAttribute="bottom" constant="20" id="uc9-aa-DMz"/>
                             <constraint firstItem="pAM-GX-4JV" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="zSs-Az-Afl"/>
                         </constraints>
@@ -302,27 +409,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHM-nJ-Kz5">
-                                <rect key="frame" x="39" y="63" width="336" height="95"/>
+                                <rect key="frame" x="39" y="91" width="336" height="95"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <string key="text">Are you ready to share
 your date with your provider?</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layers.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVm-E6-oVs">
-                                <rect key="frame" x="129" y="651" width="162" height="50"/>
+                                <rect key="frame" x="105" y="649" width="192" height="52"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.67450980390000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="Get started!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="9n4-BG-Yu8" kind="show" id="diB-lH-B1K"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="folder.badge.person.crop.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jnz-ra-3fB">
-                                <rect key="frame" x="129" y="364" width="157" height="140"/>
+                                <rect key="frame" x="100" y="333" width="197" height="171"/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.67450980390000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Yw5-EQ-UbY"/>
@@ -359,23 +477,33 @@ your date with your provider?</string>
                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get started!  Select the logs from  the past week that you  wish to share." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzg-2n-KuX">
-                                    <rect key="frame" x="42" y="17" width="177" height="81.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-MS-eSU">
-                                    <rect key="frame" x="258" y="17" width="104" height="26"/>
-                                    <state key="normal" title="Share All!"/>
+                                    <rect key="frame" x="42" y="75" width="108" height="29"/>
+                                    <color key="backgroundColor" red="0.2156862745" green="0.4431372549" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Share All!">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <connections>
                                         <action selector="shareAll_Pressed:" destination="9n4-BG-Yu8" eventType="touchUpInside" id="aSi-Ir-n84"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wM-Mf-HgV">
-                                    <rect key="frame" x="240" y="62" width="141" height="30"/>
-                                    <state key="normal" title="Share Selected Logs"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wM-Mf-HgV">
+                                    <rect key="frame" x="232" y="75" width="155" height="29"/>
+                                    <color key="backgroundColor" red="0.21568627450980393" green="0.44313725490196076" blue="0.55686274509803924" alpha="0.41548052226027399" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="tintColor" red="0.21568627450980393" green="0.44313725490196076" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                    <state key="normal" title="Share Selected Logs">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let’s get started! Select the logs from the past week that you wish to share." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzg-2n-KuX">
+                                    <rect key="frame" x="31" y="17" width="352" height="43"/>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -389,7 +517,7 @@ your date with your provider?</string>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shareCell" rowHeight="250" id="ViS-ot-LIO" customClass="shareTableViewCell" customModule="TakeCare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="131" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ViS-ot-LIO" id="s8z-yi-vVv">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -407,6 +535,7 @@ your date with your provider?</string>
                                                 <constraint firstAttribute="width" constant="75" id="8vk-gd-EkZ"/>
                                                 <constraint firstAttribute="height" constant="75" id="AOB-7w-SrF"/>
                                             </constraints>
+                                            <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                             <state key="normal" image="smiley.fill" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                             </state>
@@ -417,6 +546,7 @@ your date with your provider?</string>
                                                 <constraint firstAttribute="width" constant="75" id="Vjj-5U-33x"/>
                                                 <constraint firstAttribute="height" constant="75" id="qGe-AD-KtM"/>
                                             </constraints>
+                                            <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                             <state key="normal" image="book.fill" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                             </state>
@@ -435,6 +565,7 @@ your date with your provider?</string>
                                                 <constraint firstAttribute="height" constant="75" id="e7k-98-MeL"/>
                                                 <constraint firstAttribute="width" constant="75" id="rJb-cO-0TJ"/>
                                             </constraints>
+                                            <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                             <state key="normal" image="person.3.fill" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                             </state>
@@ -446,6 +577,7 @@ your date with your provider?</string>
                                                 <constraint firstAttribute="height" constant="75" id="UKD-bo-C12"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                             <state key="normal" image="figure.walk" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                             </state>
@@ -466,6 +598,7 @@ your date with your provider?</string>
                                                 <constraint firstAttribute="width" constant="85" id="VeU-f5-pnI"/>
                                                 <constraint firstAttribute="height" constant="160" id="bC3-nF-bGb"/>
                                             </constraints>
+                                            <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                             <state key="normal" image="list.bullet.rectangle" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                             </state>
@@ -662,14 +795,15 @@ your date with your provider?</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Label for past logs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-gX-hDb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to your previous log!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfE-gX-hDb">
                                 <rect key="frame" x="59" y="62" width="308" height="67"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="YWf-VN-Jb6"/>
                                     <constraint firstAttribute="width" constant="308" id="nZW-cn-68U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNv-Qg-aNu">
@@ -678,7 +812,9 @@ your date with your provider?</string>
                                     <constraint firstAttribute="height" constant="150" id="YEP-Uq-8Ax"/>
                                     <constraint firstAttribute="width" constant="150" id="lCB-uy-ANZ"/>
                                 </constraints>
+                                <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" image="smiley.fill" catalog="system">
+                                    <color key="titleColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large"/>
                                 </state>
                             </button>
@@ -706,6 +842,7 @@ your date with your provider?</string>
                                     <constraint firstAttribute="height" constant="150" id="7OB-GI-dtv"/>
                                     <constraint firstAttribute="width" constant="150" id="RWO-5t-Jhs"/>
                                 </constraints>
+                                <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" image="book.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
@@ -716,15 +853,17 @@ your date with your provider?</string>
                                     <constraint firstAttribute="height" constant="150" id="Z3f-rV-FVb"/>
                                     <constraint firstAttribute="width" constant="150" id="rgt-r0-kry"/>
                                 </constraints>
+                                <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" image="person.3.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2C-4e-w6B">
-                                <rect key="frame" x="47.5" y="749" width="319" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="47" y="749" width="320" height="52"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" title="    Daily Journal Entry" image="list.bullet.rectangle" catalog="system">
-                                    <color key="titleColor" name="AccentColor"/>
+                                    <color key="titleColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
                             </button>
@@ -734,9 +873,18 @@ your date with your provider?</string>
                                     <constraint firstAttribute="width" constant="150" id="BdU-Pq-bgK"/>
                                     <constraint firstAttribute="height" constant="150" id="CiO-7R-JrQ"/>
                                 </constraints>
+                                <color key="tintColor" red="0.36981829999999999" green="0.67935085299999998" blue="0.95461487769999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <state key="normal" image="figure.walk" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5rT-BW-R9A"/>
@@ -780,14 +928,11 @@ your date with your provider?</string>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="sleep" width="134" height="128"/>
         <image name="smiley.fill" catalog="system" width="128" height="121"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
