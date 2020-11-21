@@ -21,9 +21,10 @@ class shareTableViewController: UITableViewController {
             // Create OK button with action handler
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 print("Ok button tapped")
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "userVC")
-                
-                self.present(vc, animated: true, completion: nil)
+//                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "userVC")
+//
+//                self.present(vc, animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 
             })
             
@@ -49,6 +50,7 @@ class shareTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 250
     }
 
     // MARK: - Table view data source
@@ -68,8 +70,8 @@ class shareTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shareCell", for: indexPath) as! shareTableViewCell
 
         // Configure the cell...
-        cell.dayLabel.text = Week[index]
-        index = index+1
+        cell.dayLabel.text = Week[indexPath.row]
+//        index = index+1
         
 
         return cell
