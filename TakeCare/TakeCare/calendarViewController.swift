@@ -23,7 +23,7 @@ class calendarViewController: /*UIViewController,*/ UINavigationController, Cale
         self.view.backgroundColor=Style.bgColor
         
         view.addSubview(calenderView)
-        calenderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive=true
+        calenderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive=true
         calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
         calenderView.heightAnchor.constraint(equalToConstant: 365).isActive=true

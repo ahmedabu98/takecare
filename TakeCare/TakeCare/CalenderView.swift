@@ -145,8 +145,9 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         lbl.textColor=UIColor.white
         // delegate?.performCustomSegue()
         
-        let vc = storyboard?.instantiateViewController(identifier: "DetailLogViewController")
-        self.navController?.pushViewController(vc!, animated: true)
+        let vc = storyboard?.instantiateViewController(identifier: "DetailLogViewController") as! checkAllPastLogsViewController
+        vc.text = "Hello World"
+        self.navController?.pushViewController(vc, animated: true)
         
         // let registerViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailLogViewController")
         // storyboard.present(registerViewController, animated: true)

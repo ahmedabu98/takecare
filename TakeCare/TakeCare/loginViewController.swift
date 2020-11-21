@@ -27,8 +27,11 @@ class loginViewController: UIViewController {
                 self.present(alert, animated: true)
             } else {
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "userVC")
-                
+                // vc.accessibilityRespondsToUserInteraction = true
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
+                // self.show(vc, sender: nil)
+                
 //                self.performSegue(withIdentifier: "feedPageSegue", sender: nil)
             }
 
