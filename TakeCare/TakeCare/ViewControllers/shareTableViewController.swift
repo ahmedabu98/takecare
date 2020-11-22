@@ -20,13 +20,26 @@ class shareTableViewController: UITableViewController {
             
             // Create OK button with action handler
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-                print("Ok button tapped")
+                //print("Ok button tapped")
 //                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "userVC")
 //
 //                self.present(vc, animated: true, completion: nil)
-                self.dismiss(animated: true, completion: nil)
+                    let confirmMessage2 = UIAlertController(title: "Confirmation", message: "Your weekly logs were successfully shared with your provider", preferredStyle: .alert)
+                    
+                    let dismiss = UIAlertAction(title: "Dismiss", style: .cancel) { (action) -> Void in
+                        
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    
+                    confirmMessage2.addAction(dismiss)
+                    
+                    self.present(confirmMessage2, animated: true, completion: nil)
+
+        //            self.dismiss(animated: true, completion: nil)
+                })
+              //  self.dismiss(animated: true, completion: nil)
                 
-            })
+           // })
             
             // Create Cancel button with action handlder
             let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in

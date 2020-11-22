@@ -24,7 +24,7 @@ class moodViewController: UIViewController {
 
         let yes = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             
-            let confirmMessage2 = UIAlertController(title: "Confirmation", message: "Your daily journal log was successfully saved", preferredStyle: .alert)
+            let confirmMessage2 = UIAlertController(title: "Confirmation", message: "Your daily mood log was successfully saved", preferredStyle: .alert)
             
             let dismiss = UIAlertAction(title: "Dismiss", style: .cancel) { (action) -> Void in
                 

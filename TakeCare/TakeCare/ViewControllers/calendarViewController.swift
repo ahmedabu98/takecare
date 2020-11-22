@@ -18,7 +18,7 @@ class calendarViewController: /*UIViewController,*/ UINavigationController, Cale
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "My Calender"
+        self.title = "Past Logs"
         self.navigationController?.navigationBar.isTranslucent=false
         self.view.backgroundColor=Style.bgColor
         
