@@ -19,7 +19,7 @@
 		6C83BF9C255B7C1F007C701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C83BF9B255B7C1E007C701C /* GoogleService-Info.plist */; };
 		6C9ACAB32569D6DE003E0C91 /* moodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9ACAB22569D6DE003E0C91 /* moodViewController.swift */; };
 		6C9ACAB82569E393003E0C91 /* substanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9ACAB72569E392003E0C91 /* substanceViewController.swift */; };
-		6C9ACABD2569ED8A003E0C91 /* substanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9ACABC2569ED8A003E0C91 /* substanceTableViewCell.swift */; };
+		6C9ACACB2569F076003E0C91 /* substanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9ACACA2569F076003E0C91 /* substanceTableViewCell.swift */; };
 		7DCBC93F4BC9C52C41E3A781 /* Pods_TakeCareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4A656E7048C790319D4E2F /* Pods_TakeCareTests.framework */; };
 		AF86ACD9DAF9ACE3A14859DF /* Pods_TakeCare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1342874D2978ABF5DD687A5 /* Pods_TakeCare.framework */; };
 		C904ACAC25689DCB0050524B /* checkAllPastLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904ACAB25689DCB0050524B /* checkAllPastLogsViewController.swift */; };
@@ -71,7 +71,7 @@
 		6C83BF9B255B7C1E007C701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C9ACAB22569D6DE003E0C91 /* moodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodViewController.swift; sourceTree = "<group>"; };
 		6C9ACAB72569E392003E0C91 /* substanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = substanceViewController.swift; sourceTree = "<group>"; };
-		6C9ACABC2569ED8A003E0C91 /* substanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = substanceTableViewCell.swift; sourceTree = "<group>"; };
+		6C9ACACA2569F076003E0C91 /* substanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = substanceTableViewCell.swift; sourceTree = "<group>"; };
 		941F0FC1D97398930960E902 /* Pods-TakeCare-TakeCareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.release.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC8E98A1627ABAA8A66FABF1 /* Pods-TakeCare-TakeCareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TakeCare-TakeCareUITests.debug.xcconfig"; path = "Target Support Files/Pods-TakeCare-TakeCareUITests/Pods-TakeCare-TakeCareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C904ACAB25689DCB0050524B /* checkAllPastLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkAllPastLogsViewController.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C3B4D22565E0AC0062D2D1 /* shareTableViewCell.swift */,
-				6C9ACABC2569ED8A003E0C91 /* substanceTableViewCell.swift */,
+				6C9ACACA2569F076003E0C91 /* substanceTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			files = (
 				C99C7EC1255EFC2D0015172C /* calendarViewController.swift in Sources */,
 				C9360167255CAD360077AC04 /* MonthView.swift in Sources */,
-				6C9ACABD2569ED8A003E0C91 /* substanceTableViewCell.swift in Sources */,
+				6C9ACACB2569F076003E0C91 /* substanceTableViewCell.swift in Sources */,
 				C904ACDD2568B2380050524B /* todayViewController.swift in Sources */,
 				C9C3B4D32565E0AC0062D2D1 /* shareTableViewCell.swift in Sources */,
 				C9C9C8DE256487C800ED87C1 /* CalenderView.swift in Sources */,

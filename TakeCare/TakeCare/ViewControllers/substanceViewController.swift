@@ -11,7 +11,8 @@ class substanceViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var substances = [String]()
+    var substances: [String] = ["Alcohol", "Weed", "Tobacco"]
+    
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -65,6 +66,7 @@ class substanceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.rowHeight = 110
     }
 }
 
@@ -79,9 +81,20 @@ extension substanceViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "substanceCell", for: indexPath) as! substanceTableViewCell
         let substance = substances[indexPath.row]
-        cell.textLabel?.text = substance
+        cell.substanceName?.text = substance
+        if substance == "Alcohol" {
+            cell.icon.image = UIImage(named:"beer")!
+        } else if substance == "Weed" {
+            cell.icon.image = UIImage(named:"weed")!
+        } else if substance == "Tobacco" {
+            cell.icon.image = UIImage(named:"cigs")!
+        } else if substance == "Cocaine" {
+            cell.icon.image = UIImage(named:"cocaine")!
+        } else {
+            cell.icon.image = UIImage(named:"pills")!
+        }
         return cell
     }
     
