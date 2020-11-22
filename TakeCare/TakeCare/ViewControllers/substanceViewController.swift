@@ -22,9 +22,19 @@ class substanceViewController: UIViewController {
         let confirmMessage = UIAlertController(title: "Confirmation", message: "Would you like to save this substance log for today?", preferredStyle: .alert)
 
         let yes = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
-//            let vc = self.storyboard?.instantiateViewController(identifier: "DetailLogViewController") as! todayViewController
-//            vc.message = "Mood log for the day successfully saved!"
-            self.dismiss(animated: true, completion: nil)
+            
+            let confirmMessage2 = UIAlertController(title: "Confirmation", message: "Your daily journal log was successfully saved", preferredStyle: .alert)
+            
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel) { (action) -> Void in
+                
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            confirmMessage2.addAction(dismiss)
+            
+            self.present(confirmMessage2, animated: true, completion: nil)
+
+//            self.dismiss(animated: true, completion: nil)
         })
 
         let no = UIAlertAction(title: "No", style: .cancel) { (action) -> Void in
