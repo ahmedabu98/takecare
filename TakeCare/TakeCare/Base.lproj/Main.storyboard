@@ -320,15 +320,26 @@
                                 <rect key="frame" x="53" y="92" width="308" height="67"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.4431372549" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="308" id="4gi-nG-Gsn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="308" id="4gi-nG-Gsn"/>
                                     <constraint firstAttribute="height" constant="67" id="nd8-9K-BRc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter your daily journal:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
+                                <rect key="frame" x="53" y="179" width="308" height="500"/>
+                                <color key="backgroundColor" red="0.36862745098039218" green="0.67843137254901964" blue="0.95294117647058818" alpha="0.19063035102739725" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="I0Y-NI-5Zg"/>
+                                    <constraint firstAttribute="height" constant="500" id="wKl-O2-b6W"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAM-GX-4JV">
-                                <rect key="frame" x="111" y="726" width="193" height="55"/>
+                                <rect key="frame" x="134" y="726" width="164" height="47"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.67450980390000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="I'm all done!">
@@ -341,17 +352,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layers.masksToBound" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter your daily journal:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Rw-tu5">
-                                <rect key="frame" x="53" y="179" width="308" height="500"/>
-                                <color key="backgroundColor" red="0.36862745098039218" green="0.67843137254901964" blue="0.95294117647058818" alpha="0.19063035102739725" colorSpace="custom" customColorSpace="adobeRGB1998"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="308" id="I0Y-NI-5Zg"/>
-                                    <constraint firstAttribute="height" constant="500" id="wKl-O2-b6W"/>
-                                </constraints>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i0U-ZE-V6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -359,9 +359,17 @@
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="SgA-Ml-uYl"/>
                             <constraint firstItem="xQb-Rw-tu5" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="UzD-gt-jWM"/>
                             <constraint firstItem="pAM-GX-4JV" firstAttribute="top" secondItem="xQb-Rw-tu5" secondAttribute="bottom" constant="47" id="XIH-em-ZhP"/>
+                            <constraint firstItem="i0U-ZE-V6n" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pAM-GX-4JV" secondAttribute="trailing" id="jFx-s0-5HK"/>
+                            <constraint firstItem="pAM-GX-4JV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i0U-ZE-V6n" secondAttribute="leading" id="sSl-qf-scP"/>
                             <constraint firstItem="xhi-J8-ox3" firstAttribute="top" secondItem="i0U-ZE-V6n" secondAttribute="top" constant="92" id="tjQ-aZ-Scs"/>
                             <constraint firstItem="xQb-Rw-tu5" firstAttribute="top" secondItem="xhi-J8-ox3" secondAttribute="bottom" constant="20" id="uc9-aa-DMz"/>
-                            <constraint firstItem="pAM-GX-4JV" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" id="zSs-Az-Afl"/>
+                            <constraint firstItem="pAM-GX-4JV" firstAttribute="centerX" secondItem="AfQ-mI-FiN" secondAttribute="centerX" constant="9" id="zSs-Az-Afl">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FRw-6C-vDo"/>
