@@ -15,7 +15,6 @@ class todayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         todayMessage.text = message
-
         // Do any additional setup after loading the view.
     }
     
